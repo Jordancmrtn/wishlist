@@ -1,0 +1,51 @@
+.alertSucces {
+  padding: 20px;
+  color: white;
+  background-color: #4CAF50;
+  border-radius: 10px;
+  opacity: 1;
+  display: block;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.alertSuccesNone {
+  display: none;
+}
+
+.alertFail {
+  padding: 20px;
+  color: white;
+  background-color: rgb(179, 30, 30);
+  border-radius: 10px;
+  opacity: 1;
+  display: block;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.alertFailNone {
+  display: none;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+.alertFail p {
+  margin-bottom: 0px;
+}
+.alertSucces p {
+  margin-bottom: 0px;
+}

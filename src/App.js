@@ -1,24 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import CtxPresent from './Components/CtxPresent';
+import CtxSuccess from './Components/CtxSuccess';
+import CtxError from './Components/CtxError';
+import Wishlist from './Components/Wishlist';
+import Form from './Components/Form';
 
 function App() {
+
+  const [wishList, setWhislist] = useState([]);
+  const [success, setSuccess] = useState(false)
+  const [error, setError] = useState(false)
+
+
+
+
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <div className="container">
+          <h1 id="title">WishList</h1>
+          <CtxSuccess.Provider value={[success, setSuccess]}>
+          <CtxPresent.Provider value={[wishList, setWhislist]}>
+          <CtxError.Provider value={[error, setError]}>
+            <Wishlist />
+            <Form />
+          </CtxError.Provider>
+          </CtxPresent.Provider>
+          </CtxSuccess.Provider>
+        </div>
     </div>
   );
 }
